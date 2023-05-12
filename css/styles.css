@@ -1,0 +1,22 @@
+.container {
+    height: 700px;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+}
+.btn {
+    display: block;
+    width: 500px;
+    height: 150px;
+}
+.text {
+    font-weight: 700;
+    font-size: 50px;
+}
+.text::before {
+    content:"";
+    width: 20px;
+    height: 20px;
+    background-color: tomato;
+}
