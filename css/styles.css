@@ -6,17 +6,55 @@
     background-color: pink;
 }
 .btn {
-    display: block;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    margin: auto;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: greenyellow;
+    background-color: purple;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 500px;
     height: 150px;
+    overflow: hidden;
+}
+.btn:hover {
+    background-color: greenyellow;
+    color: purple;
 }
 .text {
     font-weight: 700;
     font-size: 50px;
 }
-.text::before {
-    content:"";
-    width: 20px;
-    height: 20px;
-    background-color: tomato;
+.btn::before, .btn::after {
+    content: "";
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn::after {
+    margin-left: 30px;
+    background-image: url("../images/p_O.jpg");
+}
+.btn:hover::after {
+    transform: translateY(120px);
+}
+
+.btn::before {
+    position:absolute;
+    right: 19%;
+    background-image: url("../images/IMG_5168.jpg");
+    background-size: contain;
+
+    transform: translateY(-120px);
+
+}
+
+.btn:hover::before {
+    transform: translateY(12px);
 }
